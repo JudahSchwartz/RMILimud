@@ -1,8 +1,11 @@
 package ClientCode;
 
+import java.rmi.RMISecurityManager;
+
 public class Client {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        System.setSecurityManager(new SecurityManager());
 
+        System.out.println("Hello");
     }
 }
